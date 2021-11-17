@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+void main() => (runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
+  home: Scaffold(
+    floatingActionButton: FloatingActionButton(
+      child: Icon(Icons.camera),
+      onPressed: () {},
+      backgroundColor: Colors.deepPurpleAccent,
+    ),
+
+    floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    appBar: AppBar(
+      title: Text('Illustrator'),
+      centerTitle: true,
+      backgroundColor: Colors.deepPurpleAccent,
+    ),
+
+    body: Center(
+      child: Image(
+        image: NetworkImage('data:image/png;base64,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'),
+      )
+    ),
+
+    bottomNavigationBar: BottomAppBar(
+      shape: CircularNotchedRectangle(),
+      color: Colors.deepPurpleAccent,
+      child: Container(height: 50.0,),
+      
+  )
+    )
+    
+)
+)
+);
